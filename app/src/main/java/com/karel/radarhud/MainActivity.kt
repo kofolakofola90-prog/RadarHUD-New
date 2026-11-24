@@ -17,7 +17,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.annotation.OptIn
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ExperimentalGetImage
 import androidx.camera.core.ImageAnalysis
@@ -498,7 +498,7 @@ fun RadarHUDApp(
 // HOME SCREEN
 // ==========================================
 
-@OptIn(ExperimentalMaterial3Api::class)
+@kotlin.OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
     radarCount: Int,
@@ -1284,7 +1284,7 @@ private fun drawSpeedRadarPole(scope: androidx.compose.ui.graphics.drawscope.Dra
 // CAMERA OCR PROCESSING HELPER
 // ==========================================
 
-@OptIn(ExperimentalGetImage::class)
+@kotlin.OptIn(ExperimentalGetImage::class)
 private fun processImageProxy(
     imageProxy: ImageProxy,
     recognizer: com.google.mlkit.vision.text.TextRecognizer,
